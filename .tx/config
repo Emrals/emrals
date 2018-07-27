@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[emrals.qt-translation-012x]
+file_filter = src/qt/locale/emrals_<lang>.ts
+source_file = src/qt/locale/emrals_en.ts
+source_lang = en

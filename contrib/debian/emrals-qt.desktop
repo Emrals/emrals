@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Emrals
+Comment=Emrals P2P Cryptocurrency
+Comment[fr]=Emrals, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Emrals, eşten eşe kriptografik sanal para birimi
+Exec=emrals-qt %u
+Terminal=false
+Type=Application
+Icon=emrals128
+MimeType=x-scheme-handler/emrals;
+Categories=Office;Finance;

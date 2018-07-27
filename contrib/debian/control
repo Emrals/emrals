@@ -1,0 +1,68 @@
+Source: emrals
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@emrals.org>
+Uploaders: Holger Schinzel <holger@emrals.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.emrals.org/
+Vcs-Git: git://github.com/emralspay/emrals.git
+Vcs-Browser: https://github.com/emralspay/emrals
+
+Package: emralsd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Emrals is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Emrals uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Emrals Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, emralsd, and the CLI tool
+ emrals-cli to interact with the daemon.
+
+Package: emrals-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Emrals is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Emrals uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Emrals Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Emrals-Qt, a GUI for Emrals based on Qt.
+
+Package: emrals-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Emrals is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Emrals uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Emrals Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides emrals-tx, a command-line transaction creation
+ tool which can be used without a emrals daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
