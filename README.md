@@ -1,7 +1,7 @@
 Emrals Core staging tree 0.12.2
 ===============================
 
-`master:` [![Build Status](https://travis-ci.org/Emrals/emrals.svg?branch=master)](https://travis-ci.org/emralspay/emrals) 
+`master:` [![Build Status](https://travis-ci.org/Emrals/emrals.svg?branch=master)](https://travis-ci.org/Emrals/emrals) 
 
 https://www.emrals.org
 
