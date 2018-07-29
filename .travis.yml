@@ -88,6 +88,7 @@ after_script:
     - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then (echo "Upload goes here. Something like: scp -r $BASE_OUTDIR server" || echo "upload failed"); fi
 
 before_deploy:
+    - cd $TRAVIS_BUILD_DIR
     - ./pre-deploy.sh
 deploy:
   provider: releases
