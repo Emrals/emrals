@@ -86,3 +86,15 @@ script:
     - if [ "$RUN_TESTS" = "true" ]; then qa/pull-tester/rpc-tests.py --coverage; fi
 after_script:
     - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then (echo "Upload goes here. Something like: scp -r $BASE_OUTDIR server" || echo "upload failed"); fi
+
+before_deploy:
+    - ./pre-deploy.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: sAROvxB8kb49ObSEhbEER/OxXGtBzjEJ1DnHZQPOiuOHuDlMvJWZAfn9yMSNIk5qKUCtrjAdSqS9Rh9Gthw9zCUCXEdS2ujmnIrGh47DAyXWxTAz9mbq+xAzuYzxqCGX03bEjQp0+2Ch23oUo+IJ1n4R1AbgVuMsghgQrzSYxmx5mWJ7M9El7P1lDaDLViTsb3PCCk+TN09ckMQwiqDab+3EggcU8+GyP24JbSZRlzSrCNC0jEFwBHm6VzIiSuxjFfzX2np7RB4Xy91jnZLInX+hrPJjXAfe7OqvcXANWGjxSqRvw8LMp1Xpf4dFgLmiLnm0gUClnkAUFIbpMNyO0xxgZONrp+IM1keLD97K4GoZhXD1yUZiMnr5N6eif1Pk9+0Jfi2DeZn96tiikU5sT16EN+tM5iVeruxA/hhu44oomVjzeQttuQpJb8z+JuyHrrX07lwf/Dm9UwNdcrfYGhg+ugL9cBy5n35f7lARvCDmEI0KZhQ16qKKikifxY925bcuK9Ywd3lXd+36udwgkLbtc/BQhcUl/OoaK++7kwVn2qe51+O4wkpH442VAuYjDCy7mBmqMb1XQJ+BjC4HY5q9ToluDtwrRJrMs9Z1luR+lxYuwxbxTWZ+sHcnOyEi+pRcJS5svmS49ukr/z43HUf4cdRfMW1KwIFYVgyJb4g=
+  file_glob: true
+  file: out/**/zip/*
+  skip_cleanup: true
+  on:
+    tags: true
