@@ -1,4 +1,4 @@
-Emrals Core staging tree 0.12.2.4
+Emrals Core staging tree 0.12.2.5
 ===============================
 
 `master:` [![Build Status](https://travis-ci.org/Emrals/emrals.svg?branch=master)](https://travis-ci.org/Emrals/emrals) 
